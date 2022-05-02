@@ -1,0 +1,72 @@
+# This is a basic workflow to help you get started with Actions
+
+# This is a basic workflow to help you get started with Actions
+
+# ------------------------------------ #
+#       Made By An V.1.10.8           #
+# ------------------------------------ #
+name: My Web-1
+# ------------------------------------ #
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+# ------------------------------------ #
+jobs:
+  meni:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        tecsti: [1.1, 27, 278, 2v, 9e, 93h, os, yys,]
+        flaga: [Aqw, his, ]
+    steps:
+    - name: Setup
+      uses: actions/checkout@v1
+    - name: runneyr_go
+      run: |
+        sudo apt update -y && sleep 5
+        
+  midsi-linux:
+    needs: [meni]
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        python-version: [3.9, 3.8]
+        wemck: [2, 4, 8, 10, 12, 14, 16, 18, 20, 22]
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: EBroo maov .
+      run: |
+        cd ruo
+        ls
+        pip install selenium
+        pip install names
+        python rf.py
+  rustsi-mac:
+    needs: [meni]
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9]
+        ecvk: [1, 3, 7, 9, 11, 13, 15, 17, 19, 21]
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: EBroo mao ..
+      run: |
+        cd ruo
+        ls
+        pip install selenium
+        pip install names
+        python rf.py
